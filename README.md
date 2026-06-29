@@ -24,3 +24,12 @@ To protect downstream analytics, BI dashboards, or machine learning models from 
 ## 💻 Tech Stack
 * **Platform:** Databricks (Serverless Elastic Compute)
 * **Languages & Tools:** Python (Pandas), PySpark, and Spark Temporary Views.
+## 🛠️ Phase 2: Dimensional Modeling & Serving Layer
+To optimize downstream analytical query performance and enforce enterprise data governance, the pipeline refactors the processed Silver data into a clean **Star Schema** registered directly within **Unity Catalog**:
+*   `fact_sovereign_metrics`: Tracks centralized numeric telemetry including GDP growth, Debt-to-GDP ratios, and the calculated Misery Index.
+*   `dim_countries`: Houses enterprise-grade geographical, regional, and income-level metadata for robust slicing and dicing.
+
+## 📊 Phase 3: Presentation Layer (Executive Dashboard)
+The presentation layer surfaces an interactive BI executive asset mapped directly to the Unity Catalog serving layer, designed for two critical operational vectors:
+*   ***Corporate Strategy:*** Evaluates fiscal health, inflation exposure, and market expansion indicators to optimize capital allocation.
+*   ***Defense & Intelligence:*** Evaluates macroeconomic threat landscapes and geopolitical stability risks utilizing a custom **Misery Index** matrix.
